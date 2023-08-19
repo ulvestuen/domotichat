@@ -1,5 +1,5 @@
 <script>
-    export let role = 'user'; // 'user' or 'gpt-4'
+    export let role = 'user';
     export let text = '';
 </script>
 
@@ -12,15 +12,17 @@
         padding: 10px;
         margin: 5px;
         border-radius: 5px;
+        max-width: 480px;
+        text-align: left;
     }
 
-    .message.user {
-        background-color: #f3f3f3;
+    .user {
+        background-color: #ffd653;
         align-self: flex-end;
     }
 
-    .message.gpt-4 {
-        background-color: #e0e7ff;
+    .assistant {
+        background-color: #5cc07c;
         align-self: flex-start;
     }
 </style>
