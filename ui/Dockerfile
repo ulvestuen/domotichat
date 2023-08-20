@@ -1,6 +1,6 @@
 FROM node:18 as builder
 
-RUN npm install && npm run build
+RUN npm run build
 
 FROM nginx:alpine-slim
 
