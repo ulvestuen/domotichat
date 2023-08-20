@@ -2,6 +2,7 @@ package main
 
 import (
 	"domotichat-api/internal/chat"
+	"domotichat-api/internal/config"
 	"domotichat-api/internal/status"
 	"encoding/json"
 	"github.com/sashabaranov/go-openai"
@@ -35,7 +36,7 @@ func main() {
 			break
 		}
 	})
-	err := http.ListenAndServe(":8080", mux)
+	err := http.ListenAndServe(":"+config.Port, mux)
 	if err != nil {
 		panic("Unable to start server")
 	}
