@@ -1,3 +1,7 @@
+FROM node:18-alpine as builder
+
+RUN npm install && npm run build
+
 FROM nginx:alpine-slim
 
-ADD dist /usr/share/nginx/html
+ADD --from=builder dist /usr/share/nginx/html
