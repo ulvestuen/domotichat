@@ -4,4 +4,4 @@ RUN npm install && npm run build
 
 FROM nginx:alpine-slim
 
-ADD --from=builder dist /usr/share/nginx/html
+COPY --from=builder dist /usr/share/nginx/html
