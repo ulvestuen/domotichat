@@ -16,7 +16,7 @@
     }
 
     async function postChatCompletions(messages) {
-        const endpoint = import.meta.env.VITE_DOMOTICHAT_API_URL + "/chat/completions"
+        const endpoint = import.meta.env.VITE_DOMOTICHAT_API_BASE_URL + import.meta.env.VITE_DOMOTICHAT_API_PATH_PREFIX + "/chat/completions"
         console.log(endpoint)
         const response = await fetch(endpoint, {
             method: "POST",
