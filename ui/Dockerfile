@@ -1,5 +1,7 @@
 FROM node:18 as builder
 
+RUN pwd
+
 RUN npm run build
 
 FROM nginx:alpine-slim
