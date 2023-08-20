@@ -1,6 +1,7 @@
 :{$PORT} {
-    uri strip_prefix /api
-    reverse_proxy /api/* {$VITE_DOMOTICHAT_API_BASE_URL}
+    handle_path /api/* {
+        reverse_proxy {$VITE_DOMOTICHAT_API_BASE_URL}
+    }
 
     root * /var/www
     file_server
