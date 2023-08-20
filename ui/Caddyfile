@@ -1,6 +1,6 @@
 :{$PORT} {
     handle_path /api/* {
-        reverse_proxy {$VITE_DOMOTICHAT_API_BASE_URL}
+        reverse_proxy {CADDY_DOMOTICHAT_API_UPSTREAM_URL}
     }
 
     root * /var/www
