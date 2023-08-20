@@ -6,6 +6,7 @@ ADD ./ ./
 
 RUN npm install && npm run build
 
-FROM nginx:alpine-slim
+FROM caddy:alpine
 
-COPY --from=builder dist /usr/share/nginx/html
+COPY --from=builder ./dist /var/www
+COPY ./Caddyfile /etc/caddy/Caddyfile
