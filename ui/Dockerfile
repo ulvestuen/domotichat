@@ -1,6 +1,6 @@
 FROM node:18 as builder
 
-RUN pwd
+RUN ls
 
 RUN npm run build
 
