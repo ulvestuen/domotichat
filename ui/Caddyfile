@@ -2,7 +2,6 @@
     handle_path /api/* {
         reverse_proxy * {$CADDY_DOMOTICHAT_API_UPSTREAM_URL}
     }
-
     root * /var/www
     file_server
 }
