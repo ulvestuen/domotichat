@@ -1,5 +1,6 @@
 :{$PORT} {
-    handle_path /api/* {
+    handle /api/* {
+        uri strip_prefix /api
         reverse_proxy {$CADDY_DOMOTICHAT_API_UPSTREAM_URL}
     }
     handle {
