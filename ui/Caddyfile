@@ -1,11 +1,4 @@
 :{$PORT} {
-    route /api/* {
-        uri strip_prefix /api
-        log
-        reverse_proxy {$CADDY_DOMOTICHAT_API_UPSTREAM_URL}
-    }
-    route {
-        root * /var/www
-        file_server
-    }
+    root * /var/www
+    file_server
 }
