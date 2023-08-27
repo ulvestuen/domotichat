@@ -25,10 +25,7 @@ var functionMappings = map[string]func(any) openai.ChatCompletionMessage{
 }
 
 func turnLightBulbOn(any) openai.ChatCompletionMessage {
-	content, err := domotics.ControlLight("garden_light_on")
-	if err != nil {
-		return openai.ChatCompletionMessage{}
-	}
+	content, _ := domotics.ControlLight("garden_light_on")
 
 	return openai.ChatCompletionMessage{
 		Role:    "function",
@@ -38,10 +35,7 @@ func turnLightBulbOn(any) openai.ChatCompletionMessage {
 }
 
 func turnLightBulbOff(any) openai.ChatCompletionMessage {
-	content, err := domotics.ControlLight("garden_light_off")
-	if err != nil {
-		return openai.ChatCompletionMessage{}
-	}
+	content, _ := domotics.ControlLight("garden_light_off")
 
 	return openai.ChatCompletionMessage{
 		Role:    "function",
