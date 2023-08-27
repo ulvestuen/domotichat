@@ -21,11 +21,11 @@ func controlGardenLight(t Toggle) (string, error) {
 	response, err := http.Get(
 		fmt.Sprintf("https://maker.ifttt.com/trigger/garden_light_%s/with/key/%s",
 			t,
-			os.Getenv("SOMETHING")))
+			os.Getenv("IFTTT_WEBHOOKS_KEY")))
 	if err != nil || response.StatusCode != 200 {
-		return fmt.Sprintf("Something wrong happened when trying to turn the garden light %v", t), err
+		return fmt.Sprintf("Something wrong happened when trying to turn the garden light %s", t), err
 	}
-	return fmt.Sprintf("The garden light has been turned on %v", t), nil
+	return fmt.Sprintf("The garden light has been turned on %s", t), nil
 }
 
 type Toggle int
