@@ -98,6 +98,7 @@
         background-color: #ffd653;
         resize: none;
         box-shadow: 0 0 10px rgb(0 0 0 / 0.2);
+        outline: none;
     }
 
     .send-button {
