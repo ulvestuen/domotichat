@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@authorizerdev/authorizer-svelte": "^0.1.8",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "svelte": "^4.0.5",
     "vite": "^4.4.5"
