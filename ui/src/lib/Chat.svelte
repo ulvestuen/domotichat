@@ -87,6 +87,7 @@
     }
 
     .text-input {
+        flex-grow: 1;
         margin-right: 10px;
         padding: 0.6em;
         font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
