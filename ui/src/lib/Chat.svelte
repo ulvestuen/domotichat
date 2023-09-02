@@ -96,7 +96,6 @@
         border: 1px solid #ffd653;
         border-radius: 8px;
         background-color: #ffd653;
-        resize: none;
         box-shadow: 0 0 10px rgb(0 0 0 / 0.2);
         outline: none;
     }
@@ -108,7 +107,6 @@
         background-color: #ffd653;
         border-style: none;
         margin: 0 8px 0 8px;
-        resize: none;
     }
 
     .send-button:hover {
