@@ -70,13 +70,13 @@
     .chat-box {
         display: flex;
         flex-direction: column;
-        width: 480px;
+        width: 80vw;
     }
 
     .input-area {
         display: flex;
         flex-direction: row;
-        width: 480px;
+        width: 80vw;
         align-items: center;
         justify-content: flex-end;
         margin-top: 20px;
